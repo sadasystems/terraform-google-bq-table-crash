@@ -1,0 +1,995 @@
+2020/09/17 17:17:42 [INFO] Terraform version: 0.13.2  
+2020/09/17 17:17:42 [INFO] Go runtime version: go1.14.7
+2020/09/17 17:17:42 [INFO] CLI args: []string{"/home/slava/bin/terraform132", "apply"}
+2020/09/17 17:17:42 [DEBUG] Attempting to open CLI config file: /home/slava/.terraformrc
+2020/09/17 17:17:42 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/09/17 17:17:42 [DEBUG] checking for credentials in "/home/slava/.terraform.d/plugins"
+2020/09/17 17:17:42 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2020/09/17 17:17:42 [DEBUG] will search for provider plugins in /home/slava/.terraform.d/plugins
+2020/09/17 17:17:42 [TRACE] getproviders.SearchLocalDirectory: /home/slava/.terraform.d/plugins is a symlink to /home/slava/.terraform.d/plugins
+2020/09/17 17:17:42 [DEBUG] ignoring non-existing provider search directory /home/slava/.local/share/terraform/plugins
+2020/09/17 17:17:42 [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2020/09/17 17:17:42 [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2020/09/17 17:17:42 [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2020/09/17 17:17:42 [INFO] CLI command args: []string{"apply"}
+2020/09/17 17:17:42 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2020/09/17 17:17:42 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2020/09/17 17:17:42 [DEBUG] New state was assigned lineage "5b6de310-a294-5faf-7981-88a69990c16b"
+2020/09/17 17:17:42 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2020/09/17 17:17:42 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2020/09/17 17:17:42 [TRACE] providercache.fillMetaCache: scanning directory .terraform/plugins
+2020/09/17 17:17:42 [TRACE] getproviders.SearchLocalDirectory: .terraform/plugins is a symlink to .terraform/plugins
+2020/09/17 17:17:42 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/google v3.39.0 for linux_amd64 at .terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64
+2020/09/17 17:17:42 [TRACE] providercache.fillMetaCache: including .terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64 as a candidate package for registry.terraform.io/hashicorp/google 3.39.0
+2020/09/17 17:17:42 [DEBUG] checking for provisioner in "."
+2020/09/17 17:17:42 [DEBUG] checking for provisioner in "/home/slava/bin"
+2020/09/17 17:17:42 [DEBUG] checking for provisioner in "/home/slava/.terraform.d/plugins"
+2020/09/17 17:17:42 [INFO] Failed to read plugin lock file .terraform/plugins/linux_amd64/lock.json: open .terraform/plugins/linux_amd64/lock.json: no such file or directory
+2020/09/17 17:17:42 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2020/09/17 17:17:42 [INFO] backend/local: starting Apply operation
+2020/09/17 17:17:42 [TRACE] backend/local: requesting state manager for workspace "default"
+2020/09/17 17:17:42 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2020/09/17 17:17:42 [TRACE] backend/local: requesting state lock for workspace "default"
+2020/09/17 17:17:42 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2020/09/17 17:17:42 [TRACE] statemgr.Filesystem: existing snapshot has lineage "a7f29dfe-18ea-3bd8-7b39-9d94a43c007f" serial 3
+2020/09/17 17:17:42 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2020/09/17 17:17:42 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2020/09/17 17:17:42 [TRACE] backend/local: reading remote state for workspace "default"
+2020/09/17 17:17:42 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/09/17 17:17:42 [TRACE] statemgr.Filesystem: read snapshot with lineage "a7f29dfe-18ea-3bd8-7b39-9d94a43c007f" serial 3
+2020/09/17 17:17:42 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2020/09/17 17:17:42 [TRACE] backend/local: building context for current working directory
+2020/09/17 17:17:42 [TRACE] terraform.NewContext: starting
+2020/09/17 17:17:42 [TRACE] terraform.NewContext: loading provider schemas
+2020/09/17 17:17:42 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/google"
+2020-09-17T17:17:42.474-0700 [INFO]  plugin: configuring client automatic mTLS
+2020-09-17T17:17:42.497-0700 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5]
+2020-09-17T17:17:42.497-0700 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5 pid=2231883
+2020-09-17T17:17:42.497-0700 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5
+2020-09-17T17:17:42.510-0700 [INFO]  plugin.terraform-provider-google_v3.39.0_x5: configuring server automatic mTLS: timestamp=2020-09-17T17:17:42.510-0700
+2020-09-17T17:17:42.532-0700 [DEBUG] plugin: using plugin: version=5
+2020-09-17T17:17:42.532-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: plugin address: address=/tmp/plugin928561712 network=unix timestamp=2020-09-17T17:17:42.532-0700
+2020/09/17 17:17:42 [TRACE] GRPCProvider: GetSchema
+2020-09-17T17:17:42.581-0700 [TRACE] plugin.stdio: waiting for stdio data
+2020-09-17T17:17:42.581-0700 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2020/09/17 17:17:42 [TRACE] No provider meta schema returned
+2020/09/17 17:17:42 [TRACE] GRPCProvider: Close
+2020-09-17T17:17:42.629-0700 [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5 pid=2231883
+2020-09-17T17:17:42.629-0700 [DEBUG] plugin: plugin exited
+2020/09/17 17:17:42 [TRACE] terraform.NewContext: complete
+2020/09/17 17:17:42 [TRACE] backend/local: finished building terraform.Context
+2020/09/17 17:17:42 [TRACE] backend/local: requesting interactive input, if necessary
+2020/09/17 17:17:42 [TRACE] Context.Input: Prompting for provider arguments
+2020/09/17 17:17:42 [TRACE] Context.Input: Provider provider.google declared at main.tf:1,1-18
+2020/09/17 17:17:42 [TRACE] Context.Input: Input for provider.google: map[string]cty.Value{}
+2020/09/17 17:17:42 [TRACE] backend/local: running validation operation
+2020/09/17 17:17:42 [INFO] terraform: building graph: GraphTypeValidate
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/09/17 17:17:42 [TRACE] ConfigTransformer: Starting for path: 
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  google_bigquery_dataset.default - *terraform.NodeValidatableResource
+  google_bigquery_table.default - *terraform.NodeValidatableResource
+  ------
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/09/17 17:17:42 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/09/17 17:17:42 [TRACE] AttachResourceConfigTransformer: attaching to "google_bigquery_dataset.default" (*terraform.NodeValidatableResource) config from main.tf:5,1-45
+2020/09/17 17:17:42 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_bigquery_dataset.default
+2020/09/17 17:17:42 [TRACE] AttachResourceConfigTransformer: attaching to "google_bigquery_table.default" (*terraform.NodeValidatableResource) config from main.tf:9,1-43
+2020/09/17 17:17:42 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_bigquery_table.default
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/09/17 17:17:42 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/google\"]" provider configuration from main.tf:1,1-18
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  google_bigquery_dataset.default - *terraform.NodeValidatableResource
+  google_bigquery_table.default - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/09/17 17:17:42 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_bigquery_table.default
+2020/09/17 17:17:42 [DEBUG] ProviderTransformer: "google_bigquery_table.default" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:42 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_bigquery_dataset.default
+2020/09/17 17:17:42 [DEBUG] ProviderTransformer: "google_bigquery_dataset.default" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/09/17 17:17:42 [TRACE] AttachSchemaTransformer: attaching resource schema to google_bigquery_table.default
+2020/09/17 17:17:42 [TRACE] AttachSchemaTransformer: attaching resource schema to google_bigquery_dataset.default
+2020/09/17 17:17:42 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/17 17:17:42 [DEBUG] ReferenceTransformer: "google_bigquery_dataset.default" references: []
+2020/09/17 17:17:42 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: []
+2020/09/17 17:17:42 [DEBUG] ReferenceTransformer: "google_bigquery_table.default" references: [google_bigquery_dataset.default]
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default - *terraform.NodeValidatableResource
+    google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default - *terraform.NodeValidatableResource
+    google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    google_bigquery_table.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default - *terraform.NodeValidatableResource
+    google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    google_bigquery_table.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    google_bigquery_table.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default - *terraform.NodeValidatableResource
+    google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    google_bigquery_table.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    google_bigquery_table.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  google_bigquery_dataset.default - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default - *terraform.NodeValidatableResource
+    google_bigquery_dataset.default - *terraform.NodeValidatableResource
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_table.default - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_table.default - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/09/17 17:17:42 [DEBUG] Starting graph walk: walkValidate
+2020/09/17 17:17:42 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"]"
+2020/09/17 17:17:42 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/09/17 17:17:42 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": evaluating
+2020/09/17 17:17:42 [TRACE] [walkValidate] Entering eval tree: provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalInitProvider
+2020-09-17T17:17:42.630-0700 [INFO]  plugin: configuring client automatic mTLS
+2020-09-17T17:17:42.656-0700 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5]
+2020-09-17T17:17:42.656-0700 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5 pid=2231900
+2020-09-17T17:17:42.656-0700 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5
+2020-09-17T17:17:42.670-0700 [INFO]  plugin.terraform-provider-google_v3.39.0_x5: configuring server automatic mTLS: timestamp=2020-09-17T17:17:42.670-0700
+2020-09-17T17:17:42.696-0700 [DEBUG] plugin: using plugin: version=5
+2020-09-17T17:17:42.696-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: plugin address: address=/tmp/plugin991008998 network=unix timestamp=2020-09-17T17:17:42.696-0700
+2020/09/17 17:17:42 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/google\"]" provider for provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalValidateProvider
+2020/09/17 17:17:42 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/google"]: using explicit config only
+2020/09/17 17:17:42 [TRACE] GRPCProvider: GetSchema
+2020-09-17T17:17:42.747-0700 [TRACE] plugin.stdio: waiting for stdio data
+2020-09-17T17:17:42.747-0700 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2020/09/17 17:17:42 [TRACE] No provider meta schema returned
+2020/09/17 17:17:42 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/09/17 17:17:42 [TRACE] eval: terraform.EvalNoop
+2020/09/17 17:17:42 [TRACE] eval: terraform.EvalNoop
+2020/09/17 17:17:42 [TRACE] eval: terraform.EvalNoop
+2020/09/17 17:17:42 [TRACE] [walkValidate] Exiting eval tree: provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:42 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": visit complete
+2020/09/17 17:17:42 [TRACE] dag/walk: visiting "google_bigquery_dataset.default"
+2020/09/17 17:17:42 [TRACE] vertex "google_bigquery_dataset.default": starting visit (*terraform.NodeValidatableResource)
+2020/09/17 17:17:42 [TRACE] vertex "google_bigquery_dataset.default": evaluating
+2020/09/17 17:17:42 [TRACE] [walkValidate] Entering eval tree: google_bigquery_dataset.default
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalValidateResource
+2020/09/17 17:17:42 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/09/17 17:17:42 [TRACE] [walkValidate] Exiting eval tree: google_bigquery_dataset.default
+2020/09/17 17:17:42 [TRACE] vertex "google_bigquery_dataset.default": visit complete
+2020/09/17 17:17:42 [TRACE] dag/walk: visiting "google_bigquery_table.default"
+2020/09/17 17:17:42 [TRACE] vertex "google_bigquery_table.default": starting visit (*terraform.NodeValidatableResource)
+2020/09/17 17:17:42 [TRACE] vertex "google_bigquery_table.default": evaluating
+2020/09/17 17:17:42 [TRACE] [walkValidate] Entering eval tree: google_bigquery_table.default
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalValidateResource
+2020/09/17 17:17:42 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/09/17 17:17:42 [TRACE] [walkValidate] Exiting eval tree: google_bigquery_table.default
+2020/09/17 17:17:42 [TRACE] vertex "google_bigquery_table.default": visit complete
+2020/09/17 17:17:42 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/17 17:17:42 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/09/17 17:17:42 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/09/17 17:17:42 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/09/17 17:17:42 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/09/17 17:17:42 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/09/17 17:17:42 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/09/17 17:17:42 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": evaluating
+2020/09/17 17:17:42 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020/09/17 17:17:42 [TRACE] [walkValidate] Entering eval tree: provider["registry.terraform.io/hashicorp/google"] (close)
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalCloseProvider
+2020/09/17 17:17:42 [TRACE] GRPCProvider: Close
+2020-09-17T17:17:42.824-0700 [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5 pid=2231900
+2020-09-17T17:17:42.824-0700 [DEBUG] plugin: plugin exited
+2020/09/17 17:17:42 [TRACE] [walkValidate] Exiting eval tree: provider["registry.terraform.io/hashicorp/google"] (close)
+2020/09/17 17:17:42 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": visit complete
+2020/09/17 17:17:42 [TRACE] dag/walk: visiting "root"
+2020/09/17 17:17:42 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2020/09/17 17:17:42 [TRACE] vertex "root": evaluating
+2020/09/17 17:17:42 [TRACE] [walkValidate] Entering eval tree: root
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:42 [TRACE] eval: terraform.EvalNoop
+2020/09/17 17:17:42 [TRACE] [walkValidate] Exiting eval tree: root
+2020/09/17 17:17:42 [TRACE] vertex "root": visit complete
+2020/09/17 17:17:42 [INFO] backend/local: apply calling Refresh
+2020/09/17 17:17:42 [INFO] terraform: building graph: GraphTypeRefresh
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/09/17 17:17:42 [TRACE] ConfigTransformer: Starting for path: 
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+  google_bigquery_table.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+  ------
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/09/17 17:17:42 [TRACE] ConfigTransformer: Starting for path: 
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.ConfigTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/09/17 17:17:42 [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/09/17 17:17:42 [TRACE] AttachResourceConfigTransformer: attaching to "google_bigquery_dataset.default (expand)" (*terraform.nodeExpandRefreshableManagedResource) config from main.tf:5,1-45
+2020/09/17 17:17:42 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_bigquery_dataset.default (expand)
+2020/09/17 17:17:42 [TRACE] AttachResourceConfigTransformer: attaching to "google_bigquery_table.default (expand)" (*terraform.nodeExpandRefreshableManagedResource) config from main.tf:9,1-43
+2020/09/17 17:17:42 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_bigquery_table.default (expand)
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/09/17 17:17:42 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/google\"]" provider configuration from main.tf:1,1-18
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+  google_bigquery_table.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/09/17 17:17:42 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_bigquery_dataset.default (expand)
+2020/09/17 17:17:42 [DEBUG] ProviderTransformer: "google_bigquery_dataset.default (expand)" (*terraform.nodeExpandRefreshableManagedResource) needs provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:42 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_bigquery_table.default (expand)
+2020/09/17 17:17:42 [DEBUG] ProviderTransformer: "google_bigquery_table.default (expand)" (*terraform.nodeExpandRefreshableManagedResource) needs provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/09/17 17:17:42 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/09/17 17:17:42 [TRACE] AttachSchemaTransformer: attaching resource schema to google_bigquery_dataset.default (expand)
+2020/09/17 17:17:42 [TRACE] AttachSchemaTransformer: attaching resource schema to google_bigquery_table.default (expand)
+2020/09/17 17:17:42 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/17 17:17:42 [DEBUG] ReferenceTransformer: "google_bigquery_dataset.default (expand)" references: []
+2020/09/17 17:17:42 [DEBUG] ReferenceTransformer: "google_bigquery_table.default (expand)" references: [google_bigquery_dataset.default (expand)]
+2020/09/17 17:17:42 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: []
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/09/17 17:17:42 [TRACE] AttachDependenciesTransformer: google_bigquery_dataset.default depends on []
+2020/09/17 17:17:42 [TRACE] AttachDependenciesTransformer: google_bigquery_table.default depends on [google_bigquery_dataset.default]
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    google_bigquery_table.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    google_bigquery_table.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_table.default (expand) - *terraform.nodeExpandRefreshableManagedResource
+  root - *terraform.nodeCloseModule
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/09/17 17:17:42 [DEBUG] Starting graph walk: walkRefresh
+2020/09/17 17:17:42 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"]"
+2020/09/17 17:17:42 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/09/17 17:17:42 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": evaluating
+2020/09/17 17:17:42 [TRACE] [walkRefresh] Entering eval tree: provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalInitProvider
+2020-09-17T17:17:42.825-0700 [INFO]  plugin: configuring client automatic mTLS
+2020-09-17T17:17:42.850-0700 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5]
+2020-09-17T17:17:42.850-0700 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5 pid=2231918
+2020-09-17T17:17:42.850-0700 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5
+2020-09-17T17:17:42.864-0700 [INFO]  plugin.terraform-provider-google_v3.39.0_x5: configuring server automatic mTLS: timestamp=2020-09-17T17:17:42.864-0700
+2020-09-17T17:17:42.890-0700 [DEBUG] plugin: using plugin: version=5
+2020-09-17T17:17:42.890-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: plugin address: address=/tmp/plugin770333247 network=unix timestamp=2020-09-17T17:17:42.890-0700
+2020/09/17 17:17:42 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/google\"]" provider for provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:42 [TRACE] eval: terraform.EvalNoop
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalConfigProvider
+2020/09/17 17:17:42 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/google"]: using explicit config only
+2020/09/17 17:17:42 [TRACE] GRPCProvider: GetSchema
+2020-09-17T17:17:42.941-0700 [TRACE] plugin.stdio: waiting for stdio data
+2020-09-17T17:17:42.941-0700 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2020/09/17 17:17:42 [TRACE] No provider meta schema returned
+2020/09/17 17:17:42 [TRACE] GRPCProvider: Configure
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Authenticating using DefaultClient...
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO]   -- Scopes: [https://www.googleapis.com/auth/compute https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloud-identity https://www.googleapis.com/auth/ndev.clouddns.readwrite https://www.googleapis.com/auth/devstorage.full_control https://www.googleapis.com/auth/userinfo.email]
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating GCE client for path https://compute.googleapis.com/compute/v1/projects/
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating GCE Beta client for path https://www.googleapis.com/compute/beta/projects/
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating GKE client for path https://container.googleapis.com/
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating GKE Beta client for path https://container.googleapis.com/
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud DNS client for path https://dns.googleapis.com
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud DNS Beta client for path https://www.googleapis.com
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud KMS client for path https://cloudkms.googleapis.com/
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Stackdriver Logging client for path https://logging.googleapis.com/
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Storage client for path https://storage.googleapis.com/storage/v1/
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google SqlAdmin client for path https://sqladmin.googleapis.com/
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Pubsub client for path https://pubsub.googleapis.com/
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Dataflow client for path https://dataflow.googleapis.com/
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud ResourceManager client for path https://cloudresourcemanager.googleapis.com/
+2020-09-17T17:17:42.985-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud ResourceManager V client for path https://cloudresourcemanager.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud Runtimeconfig client for path https://runtimeconfig.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud IAM client for path https://iam.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud IAMCredentials client for path https://iamcredentials.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud Service Management client for path https://servicemanagement.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud Service Usage client for path https://serviceusage.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud Billing client for path https://cloudbilling.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud Build client for path https://cloudbuild.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud BigQuery client for path https://bigquery.googleapis.com/bigquery/v2/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud CloudFunctions Client for path https://cloudfunctions.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud BigtableAdmin for path https://bigtableadmin.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud Source Repo client for path https://sourcerepo.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud Spanner client for path https://spanner.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud Dataproc client for path https://dataproc.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud Dataproc Beta client for path https://dataproc.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Filestore client for path https://file.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud IoT Core client for path 
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating App Engine client for path https://appengine.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Cloud Composer client for path https://composer.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Service Networking client for path https://servicenetworking.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud Storage Transfer client for path https://storagetransfer.googleapis.com/
+2020-09-17T17:17:42.986-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [INFO] Instantiating Google Cloud Healthcare client for path https://healthcare.googleapis.com/
+2020/09/17 17:17:42 [TRACE] eval: terraform.EvalNoop
+2020/09/17 17:17:42 [TRACE] [walkRefresh] Exiting eval tree: provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:42 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": visit complete
+2020/09/17 17:17:42 [TRACE] dag/walk: visiting "google_bigquery_dataset.default (expand)"
+2020/09/17 17:17:42 [TRACE] vertex "google_bigquery_dataset.default (expand)": starting visit (*terraform.nodeExpandRefreshableManagedResource)
+2020/09/17 17:17:42 [TRACE] vertex "google_bigquery_dataset.default (expand)": expanding dynamic subgraph
+2020/09/17 17:17:42 [TRACE] vertex "google_bigquery_dataset.default (expand)": entering dynamic subgraph
+2020/09/17 17:17:42 [TRACE] dag/walk: visiting "google_bigquery_dataset.default"
+2020/09/17 17:17:42 [TRACE] vertex "google_bigquery_dataset.default": starting visit (*terraform.NodeRefreshableManagedResource)
+2020/09/17 17:17:42 [TRACE] vertex "google_bigquery_dataset.default": expanding dynamic subgraph
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/09/17 17:17:42 [TRACE] ResourceCountTransformer: adding google_bigquery_dataset.default as *terraform.NodeRefreshableManagedResourceInstance
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  google_bigquery_dataset.default - *terraform.NodeRefreshableManagedResourceInstance
+  ------
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/09/17 17:17:42 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/09/17 17:17:42 [TRACE] vertex "google_bigquery_dataset.default": entering dynamic subgraph
+2020/09/17 17:17:42 [TRACE] dag/walk: visiting "google_bigquery_dataset.default"
+2020/09/17 17:17:42 [TRACE] vertex "google_bigquery_dataset.default": starting visit (*terraform.NodeRefreshableManagedResourceInstance)
+2020/09/17 17:17:42 [TRACE] NodeRefreshableManagedResourceInstance: google_bigquery_dataset.default will be refreshed
+2020/09/17 17:17:42 [TRACE] vertex "google_bigquery_dataset.default": evaluating
+2020/09/17 17:17:42 [TRACE] [walkRefresh] Entering eval tree: google_bigquery_dataset.default
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalReadState
+2020/09/17 17:17:42 [TRACE] EvalReadState: reading state for google_bigquery_dataset.default
+2020/09/17 17:17:42 [TRACE] UpgradeResourceState: schema version of google_bigquery_dataset.default is still 0; calling provider "google" for any other minor fixups
+2020/09/17 17:17:42 [TRACE] GRPCProvider: UpgradeResourceState
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalRefreshDependencies
+2020/09/17 17:17:42 [TRACE] eval: *terraform.EvalRefresh
+2020/09/17 17:17:42 [TRACE] GRPCProvider: ReadResource
+2020-09-17T17:17:42.988-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [DEBUG] Waiting for state to become: [success]
+2020-09-17T17:17:42.989-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [DEBUG] Retry Transport: starting RoundTrip retry loop
+2020-09-17T17:17:42.989-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:42 [DEBUG] Retry Transport: request attempt 0
+2020-09-17T17:17:43.441-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [DEBUG] Retry Transport: Stopping retries, last request was successful
+2020-09-17T17:17:43.441-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [DEBUG] Retry Transport: Returning after 1 attempts
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalWriteState
+2020/09/17 17:17:43 [TRACE] EvalWriteState: recording 0 dependencies for google_bigquery_dataset.default
+2020/09/17 17:17:43 [TRACE] EvalWriteState: writing current state object for google_bigquery_dataset.default
+2020/09/17 17:17:43 [TRACE] [walkRefresh] Exiting eval tree: google_bigquery_dataset.default
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default": visit complete
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default": dynamic subgraph completed successfully
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default": visit complete
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default (expand)": dynamic subgraph completed successfully
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default (expand)": visit complete
+2020/09/17 17:17:43 [TRACE] dag/walk: visiting "google_bigquery_table.default (expand)"
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default (expand)": starting visit (*terraform.nodeExpandRefreshableManagedResource)
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default (expand)": expanding dynamic subgraph
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default (expand)": entering dynamic subgraph
+2020/09/17 17:17:43 [TRACE] dag/walk: visiting "google_bigquery_table.default"
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": starting visit (*terraform.NodeRefreshableManagedResource)
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": expanding dynamic subgraph
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/09/17 17:17:43 [TRACE] ResourceCountTransformer: adding google_bigquery_table.default as *terraform.NodeRefreshableManagedResourceInstance
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  google_bigquery_table.default - *terraform.NodeRefreshableManagedResourceInstance
+  ------
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": entering dynamic subgraph
+2020/09/17 17:17:43 [TRACE] dag/walk: visiting "google_bigquery_table.default"
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": starting visit (*terraform.NodeRefreshableManagedResourceInstance)
+2020/09/17 17:17:43 [TRACE] NodeRefreshableManagedResourceInstance: google_bigquery_table.default will be refreshed
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": evaluating
+2020/09/17 17:17:43 [TRACE] [walkRefresh] Entering eval tree: google_bigquery_table.default
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalReadState
+2020/09/17 17:17:43 [TRACE] EvalReadState: reading state for google_bigquery_table.default
+2020/09/17 17:17:43 [TRACE] UpgradeResourceState: schema version of google_bigquery_table.default is still 0; calling provider "google" for any other minor fixups
+2020/09/17 17:17:43 [TRACE] GRPCProvider: UpgradeResourceState
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalRefreshDependencies
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalRefresh
+2020/09/17 17:17:43 [TRACE] GRPCProvider: ReadResource
+2020-09-17T17:17:43.453-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Reading BigQuery table: projects/sada-slava-maslennikov/datasets/something/tables/something
+2020-09-17T17:17:43.454-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [DEBUG] Retry Transport: starting RoundTrip retry loop
+2020-09-17T17:17:43.454-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [DEBUG] Retry Transport: request attempt 0
+2020-09-17T17:17:43.661-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [DEBUG] Retry Transport: Stopping retries, last request was successful
+2020-09-17T17:17:43.661-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [DEBUG] Retry Transport: Returning after 1 attempts
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalWriteState
+2020/09/17 17:17:43 [TRACE] EvalWriteState: recording 1 dependencies for google_bigquery_table.default
+2020/09/17 17:17:43 [TRACE] EvalWriteState: writing current state object for google_bigquery_table.default
+2020/09/17 17:17:43 [TRACE] [walkRefresh] Exiting eval tree: google_bigquery_table.default
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": visit complete
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": dynamic subgraph completed successfully
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": visit complete
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default (expand)": dynamic subgraph completed successfully
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default (expand)": visit complete
+2020/09/17 17:17:43 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2020/09/17 17:17:43 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/09/17 17:17:43 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": evaluating
+2020/09/17 17:17:43 [TRACE] [walkRefresh] Entering eval tree: provider["registry.terraform.io/hashicorp/google"] (close)
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalCloseProvider
+2020/09/17 17:17:43 [TRACE] GRPCProvider: Close
+2020-09-17T17:17:43.670-0700 [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5 pid=2231918
+2020-09-17T17:17:43.670-0700 [DEBUG] plugin: plugin exited
+2020/09/17 17:17:43 [TRACE] [walkRefresh] Exiting eval tree: provider["registry.terraform.io/hashicorp/google"] (close)
+2020/09/17 17:17:43 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": visit complete
+2020/09/17 17:17:43 [TRACE] dag/walk: visiting "root"
+2020/09/17 17:17:43 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2020/09/17 17:17:43 [TRACE] vertex "root": evaluating
+2020/09/17 17:17:43 [TRACE] [walkRefresh] Entering eval tree: root
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:43 [TRACE] eval: terraform.EvalNoop
+2020/09/17 17:17:43 [TRACE] [walkRefresh] Exiting eval tree: root
+2020/09/17 17:17:43 [TRACE] vertex "root": visit complete
+2020/09/17 17:17:43 [INFO] backend/local: apply calling Plan
+2020/09/17 17:17:43 [INFO] terraform: building graph: GraphTypePlan
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/09/17 17:17:43 [TRACE] ConfigTransformer: Starting for path: 
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+  google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/09/17 17:17:43 [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/09/17 17:17:43 [TRACE] AttachResourceConfigTransformer: attaching to "google_bigquery_table.default (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:9,1-43
+2020/09/17 17:17:43 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_bigquery_table.default (expand)
+2020/09/17 17:17:43 [TRACE] AttachResourceConfigTransformer: attaching to "google_bigquery_dataset.default (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:5,1-45
+2020/09/17 17:17:43 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_bigquery_dataset.default (expand)
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/09/17 17:17:43 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/09/17 17:17:43 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/google\"]" provider configuration from main.tf:1,1-18
+2020/09/17 17:17:43 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+  google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:43 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/09/17 17:17:43 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/09/17 17:17:43 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_bigquery_dataset.default (expand)
+2020/09/17 17:17:43 [DEBUG] ProviderTransformer: "google_bigquery_dataset.default (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:43 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_bigquery_table.default (expand)
+2020/09/17 17:17:43 [DEBUG] ProviderTransformer: "google_bigquery_table.default (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:43 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:43 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/09/17 17:17:43 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/09/17 17:17:43 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/09/17 17:17:43 [TRACE] AttachSchemaTransformer: attaching resource schema to google_bigquery_dataset.default (expand)
+2020/09/17 17:17:43 [TRACE] AttachSchemaTransformer: attaching resource schema to google_bigquery_table.default (expand)
+2020/09/17 17:17:43 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/17 17:17:43 [DEBUG] ReferenceTransformer: "google_bigquery_dataset.default (expand)" references: []
+2020/09/17 17:17:43 [DEBUG] ReferenceTransformer: "google_bigquery_table.default (expand)" references: [google_bigquery_dataset.default (expand)]
+2020/09/17 17:17:43 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: []
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/09/17 17:17:43 [TRACE] ForcedCBDTransformer: "google_bigquery_dataset.default (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/09/17 17:17:43 [TRACE] ForcedCBDTransformer: "google_bigquery_table.default (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  ------
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_dataset.default (expand) - *terraform.nodeExpandPlannableResource
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_table.default (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  ------
+2020/09/17 17:17:43 [DEBUG] Starting graph walk: walkPlan
+2020/09/17 17:17:43 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"]"
+2020/09/17 17:17:43 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": starting visit (*terraform.NodeApplyableProvider)
+2020/09/17 17:17:43 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": evaluating
+2020/09/17 17:17:43 [TRACE] [walkPlan] Entering eval tree: provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalInitProvider
+2020-09-17T17:17:43.674-0700 [INFO]  plugin: configuring client automatic mTLS
+2020-09-17T17:17:43.697-0700 [DEBUG] plugin: starting plugin: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5 args=[.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5]
+2020-09-17T17:17:43.697-0700 [DEBUG] plugin: plugin started: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5 pid=2231938
+2020-09-17T17:17:43.697-0700 [DEBUG] plugin: waiting for RPC address: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5
+2020-09-17T17:17:43.711-0700 [INFO]  plugin.terraform-provider-google_v3.39.0_x5: configuring server automatic mTLS: timestamp=2020-09-17T17:17:43.711-0700
+2020-09-17T17:17:43.733-0700 [DEBUG] plugin: using plugin: version=5
+2020-09-17T17:17:43.733-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: plugin address: address=/tmp/plugin188481846 network=unix timestamp=2020-09-17T17:17:43.733-0700
+2020/09/17 17:17:43 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/google\"]" provider for provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:43 [TRACE] eval: terraform.EvalNoop
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalOpFilter
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalConfigProvider
+2020/09/17 17:17:43 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/google"]: using explicit config only
+2020/09/17 17:17:43 [TRACE] GRPCProvider: GetSchema
+2020-09-17T17:17:43.776-0700 [TRACE] plugin.stdio: waiting for stdio data
+2020-09-17T17:17:43.777-0700 [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unimplemented desc = unknown service plugin.GRPCStdio"
+2020/09/17 17:17:43 [TRACE] No provider meta schema returned
+2020/09/17 17:17:43 [TRACE] GRPCProvider: Configure
+2020-09-17T17:17:43.816-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Authenticating using DefaultClient...
+2020-09-17T17:17:43.816-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO]   -- Scopes: [https://www.googleapis.com/auth/compute https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloud-identity https://www.googleapis.com/auth/ndev.clouddns.readwrite https://www.googleapis.com/auth/devstorage.full_control https://www.googleapis.com/auth/userinfo.email]
+2020-09-17T17:17:43.816-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating GCE client for path https://compute.googleapis.com/compute/v1/projects/
+2020-09-17T17:17:43.816-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating GCE Beta client for path https://www.googleapis.com/compute/beta/projects/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating GKE client for path https://container.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating GKE Beta client for path https://container.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud DNS client for path https://dns.googleapis.com
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud DNS Beta client for path https://www.googleapis.com
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud KMS client for path https://cloudkms.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Stackdriver Logging client for path https://logging.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Storage client for path https://storage.googleapis.com/storage/v1/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google SqlAdmin client for path https://sqladmin.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Pubsub client for path https://pubsub.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Dataflow client for path https://dataflow.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud ResourceManager client for path https://cloudresourcemanager.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud ResourceManager V client for path https://cloudresourcemanager.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud Runtimeconfig client for path https://runtimeconfig.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud IAM client for path https://iam.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud IAMCredentials client for path https://iamcredentials.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud Service Management client for path https://servicemanagement.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud Service Usage client for path https://serviceusage.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud Billing client for path https://cloudbilling.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud Build client for path https://cloudbuild.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud BigQuery client for path https://bigquery.googleapis.com/bigquery/v2/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud CloudFunctions Client for path https://cloudfunctions.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud BigtableAdmin for path https://bigtableadmin.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud Source Repo client for path https://sourcerepo.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud Spanner client for path https://spanner.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud Dataproc client for path https://dataproc.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud Dataproc Beta client for path https://dataproc.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Filestore client for path https://file.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud IoT Core client for path 
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating App Engine client for path https://appengine.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Cloud Composer client for path https://composer.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Service Networking client for path https://servicenetworking.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud Storage Transfer client for path https://storagetransfer.googleapis.com/
+2020-09-17T17:17:43.817-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 2020/09/17 17:17:43 [INFO] Instantiating Google Cloud Healthcare client for path https://healthcare.googleapis.com/
+2020/09/17 17:17:43 [TRACE] eval: terraform.EvalNoop
+2020/09/17 17:17:43 [TRACE] [walkPlan] Exiting eval tree: provider["registry.terraform.io/hashicorp/google"]
+2020/09/17 17:17:43 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": visit complete
+2020/09/17 17:17:43 [TRACE] dag/walk: visiting "google_bigquery_dataset.default (expand)"
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default (expand)": expanding dynamic subgraph
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default (expand)": entering dynamic subgraph
+2020/09/17 17:17:43 [TRACE] dag/walk: visiting "google_bigquery_dataset.default"
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default": starting visit (*terraform.NodePlannableResource)
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default": evaluating
+2020/09/17 17:17:43 [TRACE] [walkPlan] Entering eval tree: google_bigquery_dataset.default
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalWriteResourceState
+2020/09/17 17:17:43 [TRACE] [walkPlan] Exiting eval tree: google_bigquery_dataset.default
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default": expanding dynamic subgraph
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/09/17 17:17:43 [TRACE] ResourceCountTransformer: adding google_bigquery_dataset.default as *terraform.NodePlannableResourceInstance
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  google_bigquery_dataset.default - *terraform.NodePlannableResourceInstance
+  ------
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/17 17:17:43 [DEBUG] ReferenceTransformer: "google_bigquery_dataset.default" references: []
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default": entering dynamic subgraph
+2020/09/17 17:17:43 [TRACE] dag/walk: visiting "google_bigquery_dataset.default"
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default": starting visit (*terraform.NodePlannableResourceInstance)
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default": evaluating
+2020/09/17 17:17:43 [TRACE] [walkPlan] Entering eval tree: google_bigquery_dataset.default
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalReadState
+2020/09/17 17:17:43 [TRACE] EvalReadState: reading state for google_bigquery_dataset.default
+2020/09/17 17:17:43 [TRACE] UpgradeResourceState: schema version of google_bigquery_dataset.default is still 0; calling provider "google" for any other minor fixups
+2020/09/17 17:17:43 [TRACE] GRPCProvider: UpgradeResourceState
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalValidateSelfRef
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalDiff
+2020/09/17 17:17:43 [TRACE] Re-validating config for "google_bigquery_dataset.default"
+2020/09/17 17:17:43 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/09/17 17:17:43 [TRACE] GRPCProvider: PlanResourceChange
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalCheckPreventDestroy
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalWriteState
+2020/09/17 17:17:43 [TRACE] EvalWriteState: writing current state object for google_bigquery_dataset.default
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalWriteDiff
+2020/09/17 17:17:43 [TRACE] EvalWriteDiff: recorded NoOp change for google_bigquery_dataset.default
+2020/09/17 17:17:43 [TRACE] [walkPlan] Exiting eval tree: google_bigquery_dataset.default
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default": visit complete
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default": dynamic subgraph completed successfully
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default": visit complete
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default (expand)": dynamic subgraph completed successfully
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_dataset.default (expand)": visit complete
+2020/09/17 17:17:43 [TRACE] dag/walk: visiting "google_bigquery_table.default (expand)"
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default (expand)": expanding dynamic subgraph
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default (expand)": entering dynamic subgraph
+2020/09/17 17:17:43 [TRACE] dag/walk: visiting "google_bigquery_table.default"
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": starting visit (*terraform.NodePlannableResource)
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": evaluating
+2020/09/17 17:17:43 [TRACE] [walkPlan] Entering eval tree: google_bigquery_table.default
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalWriteResourceState
+2020/09/17 17:17:43 [TRACE] [walkPlan] Exiting eval tree: google_bigquery_table.default
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": expanding dynamic subgraph
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/09/17 17:17:43 [TRACE] ResourceCountTransformer: adding google_bigquery_table.default as *terraform.NodePlannableResourceInstance
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  google_bigquery_table.default - *terraform.NodePlannableResourceInstance
+  ------
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/09/17 17:17:43 [DEBUG] ReferenceTransformer: "google_bigquery_table.default" references: []
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/09/17 17:17:43 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": entering dynamic subgraph
+2020/09/17 17:17:43 [TRACE] dag/walk: visiting "google_bigquery_table.default"
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": starting visit (*terraform.NodePlannableResourceInstance)
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": evaluating
+2020/09/17 17:17:43 [TRACE] [walkPlan] Entering eval tree: google_bigquery_table.default
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalSequence
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalGetProvider
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalReadState
+2020/09/17 17:17:43 [TRACE] EvalReadState: reading state for google_bigquery_table.default
+2020/09/17 17:17:43 [TRACE] UpgradeResourceState: schema version of google_bigquery_table.default is still 0; calling provider "google" for any other minor fixups
+2020/09/17 17:17:43 [TRACE] GRPCProvider: UpgradeResourceState
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalValidateSelfRef
+2020/09/17 17:17:43 [TRACE] eval: *terraform.EvalDiff
+2020/09/17 17:17:43 [TRACE] Re-validating config for "google_bigquery_table.default"
+2020/09/17 17:17:43 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/09/17 17:17:43 [TRACE] GRPCProvider: PlanResourceChange
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: panic: interface conversion: interface {} is nil, not []interface {}
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: goroutine 12 [running]:
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: github.com/hashicorp/terraform-provider-google/google.JSONBytesEqual(0xc000e9cc78, 0x4, 0x8, 0xc000e9cc80, 0x2, 0x8, 0x22e54c0, 0x70000c00075d060, 0xffffffffffffffff)
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/hashicorp/terraform-provider-google/google/resource_bigquery_table.go:34 +0x44b
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: github.com/hashicorp/terraform-provider-google/google.bigQueryTableSchemaDiffSuppress(0x292e082, 0x6, 0xc000e9c4b8, 0x4, 0xc000e9cc70, 0x2, 0xc000506460, 0xc000d45500)
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/src/github.com/hashicorp/terraform-provider-google/google/resource_bigquery_table.go:59 +0xbd
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: github.com/hashicorp/terraform-plugin-sdk/helper/schema.schemaMap.diff(0xc000893e30, 0x292e082, 0x6, 0xc000989cc0, 0xc000aadfa0, 0x2e84860, 0xc000506460, 0xc000d45700, 0x0, 0x0)
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.11.0/helper/schema/schema.go:967 +0x37c
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: github.com/hashicorp/terraform-plugin-sdk/helper/schema.schemaMap.Diff(0xc000893e30, 0xc000a0a910, 0xc000f01e00, 0x0, 0x254fc80, 0xc00076ce00, 0x2e56f00, 0x22adda0, 0xffffffffffffffff, 0x0)
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.11.0/helper/schema/schema.go:506 +0x215
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Resource).simpleDiff(0xc00098e510, 0xc000a0a910, 0xc000f01e00, 0x254fc80, 0xc00076ce00, 0xc000f01e01, 0x0, 0x0)
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.11.0/helper/schema/resource.go:356 +0x85
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: github.com/hashicorp/terraform-plugin-sdk/helper/schema.(*Provider).SimpleDiff(0xc0001a0080, 0xc000d45a98, 0xc000a0a910, 0xc000f01e00, 0xc000ab4ea0, 0xc000f01e00, 0x0)
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.11.0/helper/schema/provider.go:321 +0x99
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: github.com/hashicorp/terraform-plugin-sdk/internal/helper/plugin.(*GRPCProviderServer).PlanResourceChange(0xc00014f200, 0x2e55ee0, 0xc000ab4e70, 0xc000254150, 0xc00014f200, 0xc000ab4e70, 0xc000f12ba0)
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.11.0/internal/helper/plugin/grpc_provider.go:633 +0x79c
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: github.com/hashicorp/terraform-plugin-sdk/internal/tfplugin5._Provider_PlanResourceChange_Handler(0x289fc20, 0xc00014f200, 0x2e55ee0, 0xc000ab4e70, 0xc000ea6420, 0x0, 0x2e55ee0, 0xc000ab4e70, 0xc000210300, 0x624)
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/github.com/hashicorp/terraform-plugin-sdk@v1.11.0/internal/tfplugin5/tfplugin5.pb.go:3287 +0x217
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: google.golang.org/grpc.(*Server).processUnaryRPC(0xc000209500, 0x2e8cea0, 0xc000702c00, 0xc00019e100, 0xc00098a600, 0x3e7f7e8, 0x0, 0x0, 0x0)
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.31.1/server.go:1180 +0x50a
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: google.golang.org/grpc.(*Server).handleStream(0xc000209500, 0x2e8cea0, 0xc000702c00, 0xc00019e100, 0x0)
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.31.1/server.go:1503 +0xcfd
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: google.golang.org/grpc.(*Server).serveStreams.func1.2(0xc000128b80, 0xc000209500, 0x2e8cea0, 0xc000702c00, 0xc00019e100)
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.31.1/server.go:843 +0xa1
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: created by google.golang.org/grpc.(*Server).serveStreams.func1
+2020-09-17T17:17:43.827-0700 [DEBUG] plugin.terraform-provider-google_v3.39.0_x5: 	/opt/teamcity-agent/work/5d79fe75d4460a2f/pkg/mod/google.golang.org/grpc@v1.31.1/server.go:841 +0x204
+2020-09-17T17:17:43.828-0700 [DEBUG] plugin: plugin process exited: path=.terraform/plugins/registry.terraform.io/hashicorp/google/3.39.0/linux_amd64/terraform-provider-google_v3.39.0_x5 pid=2231938 error="exit status 2"
+2020/09/17 17:17:43 [ERROR] eval: *terraform.EvalDiff, err: rpc error: code = Canceled desc = context canceled
+2020/09/17 17:17:43 [ERROR] eval: *terraform.EvalSequence, err: rpc error: code = Canceled desc = context canceled
+2020/09/17 17:17:43 [TRACE] [walkPlan] Exiting eval tree: google_bigquery_table.default
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": visit complete
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": dynamic subgraph encountered errors
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default": visit complete
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default (expand)": dynamic subgraph encountered errors
+2020/09/17 17:17:43 [TRACE] vertex "google_bigquery_table.default (expand)": visit complete
+2020/09/17 17:17:43 [TRACE] dag/walk: upstream of "provider[\"registry.terraform.io/hashicorp/google\"] (close)" errored, so skipping
+2020/09/17 17:17:43 [TRACE] dag/walk: upstream of "meta.count-boundary (EachMode fixup)" errored, so skipping
+2020/09/17 17:17:43 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2020/09/17 17:17:43 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2020/09/17 17:17:43 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2020-09-17T17:17:43.829-0700 [DEBUG] plugin: plugin exited
