@@ -11,6 +11,5 @@ resource "google_bigquery_table" "default" {
   table_id   = "something"
 
   schema = <<EOF
-[]
 EOF
 }
